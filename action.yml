@@ -50,7 +50,7 @@ runs:
     with:
       ruby-version: ${{ inputs.ruby-version }}
       bundler-cache: true
-      cache-version: ${{ inputs.rails-version }}-${{ inputs.solidus-branch }}
+      cache-version: ${{ inputs.rails-version }}-${{ inputs.solidus-branch }}-{{ inputs.database }}-{{ inputs.ruby-version }}
       rubygems: "latest"
   - name: Restore apt cache
     id: apt-cache
